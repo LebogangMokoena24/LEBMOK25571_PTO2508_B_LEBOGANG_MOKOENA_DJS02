@@ -17,18 +17,31 @@ You must use a local server because the project uses ES Modules. Opening index.h
 **Project Structure**
 
 index.html                  # App shell, modal markup
+ 
  styles.css                  # Global styles and responsive layout
+ 
  README.md
+     
      src/
+    
     ├── index.js                # App entry point, filters, event binding
+    
     ├── data.js                 # Podcast, genre, and season data
+    
     ├── components/
+    
     │   ├── PodcastCard.js      # <podcast-card> Web Component
+    
     │   └── createModal.js      # Modal open/close controller
+    
     ├── utils/
+    
     │   ├── DateUtils.js        # Formats ISO dates to readable strings
+    
     │   └── GenreService.js     # Maps genre IDs to genre names
+    
     └── views/
+        
         └── createGrid.js       # Renders podcast cards into the grid
 
 **How to Register the Web Component**
