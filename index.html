@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PodcastApp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- App Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <span class="header-icon">🎙️</span>
+        <h1>PodcastApp</h1>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <button class="icon-btn avatar-btn" aria-label="Profile">👤</button>
+      </div>
+    </header>
 
+    <!-- Filters -->
+    <section class="filters">
+      <label>Filter by:</label>
+      <select id="genreFilter">
+        <option value="all">All Genres</option>
+      </select>
+      <select id="sortFilter">
+        <option value="recent">Recently Updated</option>
+        <option value="popular">Most Popular</option>
+        <option value="newest">Newest</option>
+      </select>
+    </section>
+
+    <!-- Podcast Grid -->
+    <main id="podcastGrid" class="grid"></main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-content">
+        <div class="title-section">
+          <h2 id="modalTitle"></h2>
+          <button class="close-btn" id="closeModal" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="banner">
+          <img id="modalImage" class="modal-img" alt="" />
+          <div class="info-section">
+            <h3>Description</h3>
+            <p id="modalDesc"></p>
+            <h3>Genres</h3>
+            <div id="modalGenres" class="tags"></div>
+            <p id="modalUpdated" class="modal-updated-text"></p>
+          </div>
+        </div>
+        <h3>Seasons</h3>
+        <ul id="seasonList" class="season-list"></ul>
+      </div>
+    </div>
+
+    <script type="module" defer src="./src/index.js"></script>
+  </body>
+</html>
